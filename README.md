@@ -3,7 +3,7 @@ This is the README of my homework for the password generator for my bootcamp cou
 
 Below is the link to the live page:
 
--- LINK --
+-- https://roninhietanen.github.io/Homework-password-generator/ --
 
 # General Information:
 
