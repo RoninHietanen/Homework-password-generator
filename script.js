@@ -17,13 +17,13 @@ let arrayLow2High = (low, high) => {
   return array;
 };
 
-//I chose to use ASCII and Unicode to get the different characters.
+// I chose to use ASCII and Unicode to get the different characters.
 var uppercase = arrayLow2High(65, 90);
 var lowercase = arrayLow2High(97, 122);
 var num = arrayLow2High(48, 57);
 var schar = arrayLow2High(33, 47).concat(arrayLow2High(58, 64)).concat(arrayLow2High(91, 96)).concat(arrayLow2High(123, 126));
 
-
+// This is the event listener that is used to start the below fuction when the Generate Password button is clicked.
 getpass.addEventListener('submit', (e) => {
   e.preventDefault();
   var characterAmount = passLength.value;
@@ -41,7 +41,7 @@ getpass.addEventListener('submit', (e) => {
   passText.innerText = pass;
 });
 
-//this
+// This is the function that generates the password.
 let genPass = (
   passAmount,
   includeUppercase,

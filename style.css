@@ -1,9 +1,11 @@
+/* Universal Selector*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Element/Style Selectors */
 html,
 body,
 .wrapper {
@@ -19,17 +21,18 @@ body {
   width: 100vw;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+}
+
+/* Class Selectors */
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .card {
@@ -128,6 +131,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Screen and Media Queries */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
