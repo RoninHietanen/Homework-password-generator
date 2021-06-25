@@ -21,7 +21,7 @@ let arrayLow2High = (low, high) => {
 var uppercase = arrayLow2High(65, 90);
 var lowercase = arrayLow2High(97, 122);
 var num = arrayLow2High(48, 57);
-var schar = arrayLow2High(33, 47).concat(arrayLow2High(58, 64)).concat(arrayLow2High(91, 96)).concat(arrayLow2High(123, 126));
+var sChar = arrayLow2High(33, 47).concat(arrayLow2High(58, 64)).concat(arrayLow2High(94, 96)).concat(arrayLow2High(123, 126));
 
 // This is the event listener that is used to start the below fuction when the Generate Password button is clicked.
 getpass.addEventListener('submit', (e) => {
@@ -49,13 +49,13 @@ let genPass = (
   includeNumbers,
   includeSymbols
 ) => {
-  let charCodes = lowercase;
-  if (includeUppercase) charCodes = charCodes.concat(uppercase);
-  if (includeLowercase) charCodes = charCodes.concat(lowercase);
-  if (includeNumbers) charCodes = charCodes.concat(schar);
-  if (includeSymbols) charCodes = charCodes.concat(num);
   var password = [];
   for (let i = 0; i < passAmount; i++) {
+    let charCodes;
+    if (includeUppercase) charCodes = charCodes.concat(uppercase);
+    if (includeLowercase) charCodes = charCodes.concat(lowercase);
+    if (includeNumbers) charCodes = charCodes.concat(num);
+    if (includeSymbols) charCodes = charCodes.concat(sChar);
     var passCode =
     charCodes[Math.floor(Math.random() * charCodes.length)];
     password.push(String.fromCharCode(passCode));
