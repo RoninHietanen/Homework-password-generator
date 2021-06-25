@@ -51,7 +51,7 @@ let genPass = (
 ) => {
   var password = [];
   for (let i = 0; i < passAmount; i++) {
-    let charCodes;
+    let charCodes = uppercase;
     if (includeUppercase) charCodes = charCodes.concat(uppercase);
     if (includeLowercase) charCodes = charCodes.concat(lowercase);
     if (includeNumbers) charCodes = charCodes.concat(num);
